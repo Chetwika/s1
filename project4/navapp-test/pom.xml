@@ -15,4 +15,24 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-war-plugin</artifactId>
+<version>3.2.3</version>
+<configuration>
+<failOnMissingWebXml>false</failOnMissingWebXml>
+<archive>
+<manifest>
+<addClasspath>true</addClasspath>
+<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+<classpathLayoutType>repository</classpathLayoutType>
+</manifest>
+</archive>
+</configuration>
+</plugin>
+</plugins>
+</build>
 </project>
